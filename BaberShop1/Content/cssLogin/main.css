@@ -157,22 +157,18 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
-  background: -o-linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
-  background: -moz-linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
-  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+	width: 100%;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	
 }
 
 .wrap-login100 {
