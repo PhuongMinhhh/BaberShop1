@@ -22,9 +22,9 @@
 
     <!--
 
-    TemplateMo 585 Barber Shop
-
-    https://templatemo.com/tm-585-barber-shop
+   
+       NARBAR
+    
 
     -->
 </head>
@@ -56,14 +56,14 @@
                         @if (Session["USERNAME"] == null)
                         {
                             <li class="nav-item">
-                                <a class="btn btn-danger rounded m-2" href="/auth/login">Login</a>
+                                <a class="btn btn-danger rounded m-2" href="/auth/login">Đăng nhập</a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item d-flex justify-content-between">
                                 <a class="nav-link text-light fw-bold" href="/HomeBaberShop/profile">@Session["USERNAME"]</a>
-                                <a class="btn btn-danger rounded m-2" href="/auth/logout">Log out</a>
+                                <a class="btn btn-danger rounded m-2" href="/auth/logout">Đăng xuất</a>
                             </li>
                             
                         }
