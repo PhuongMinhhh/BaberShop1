@@ -2,7 +2,9 @@
 * {
   box-sizing: border-box;
 }
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --app-bg: #fff;
   --sidebar: #f3f6fd;

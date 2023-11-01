@@ -26,6 +26,14 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
+  <ItemGroup>
+  <UpToDateCheckBuilt Include="wwwroot/css/site.css" Set="Css" />
+  <UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
+</ItemGroup>
+
+<Target Name="Tailwind" BeforeTargets="Build">
+  <Exec Command="npm run css:build"/>
+</Target>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -174,6 +182,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  
   <ItemGroup>
     <Content Include="Areas\Admin\Content\ckeditor\adapters\jquery.js" />
     <Content Include="Areas\Admin\Content\ckeditor\build-config.js" />
