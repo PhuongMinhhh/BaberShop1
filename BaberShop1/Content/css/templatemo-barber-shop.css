@@ -158,15 +158,25 @@ strong {
 .back-top-icon {
   font-size: var(--h2-font-size);
 }
+/*
+ CUSTOM 
+
+*/
 
 
+
+
+.custom-btn-gt:hover {
+    background: var(--custom-btn-bg-hover-color);
+    color: var(--secondary-color);
+}
 /*---------------------------------------
   CUSTOM BLOCK BACKGROUND OVERLAY               
 -----------------------------------------*/
 .custom-block-bg-overlay-wrap {
-  background: var(--primary-color);
-  border-radius: var(--border-radius-medium);
-  transition: all 0.3s ease;
+    background: var(--primary-color);
+    border-radius: var(--border-radius-medium);
+    transition: all 0.3s ease;
 }
 
 .custom-block-bg-overlay-wrap:hover {
@@ -201,6 +211,28 @@ strong {
   line-height: normal;
   transition: all 0.3s;
   padding: 10px 20px;
+}
+.custom-btn-gt {
+    background: var(--custom-btn-bg-hover-color);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-large);
+    color: var(--secondary-color);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: normal;
+    transition: all 0.3s;
+    padding: 10px 20px;
+}
+.custom-btn-bg-yellow {
+    background: var(--custom-btn-bg-hover-color);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-large);
+    color: var(--white-color);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-bold);
+    line-height: normal;
+    transition: all 0.3s;
+    padding: 10px 20px;
 }
 .custom-btn-lg {
     color: var(--secondary-color);
@@ -237,8 +269,7 @@ strong {
 }
 
 .custom-btn-bg-white {
-  border-color: var(--white-color);
-  color: var(--white-color);
+    
 }
 
 .custom-btn-italic {

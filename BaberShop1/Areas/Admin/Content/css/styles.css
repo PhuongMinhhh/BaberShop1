@@ -631,3 +631,8 @@ body {
     margin: 10px;
     font-weight: bold;
 }
+
+.custom-tag{
+text-decoration: none;
+color: black;
+}
