@@ -5,7 +5,9 @@
     ViewBag.Tittle = "User";
     Layout = "";
 }
-
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,12 +89,20 @@
                 <h1 class="app-content-headerText">DASHBOARD - Tài khoản</h1>
 
             </div>
-            <div class="d-flex justify-content-end">
-                <a href="/Admin/Home/AddUser">
-                    <button type="button" class="btn btn-success"><i class="fas fa-plus mr-2"></i>Thêm tài khoản</button>
-                </a>
-                
-            </div>
+            
+                <div class="d-flex justify-content-end">
+                    <a href="/Admin/Home/AddUser">
+                        <button type="button" class="btn btn-success"><i class="fas fa-plus mr-2"></i>Thêm tài khoản</button>
+                    </a>
+
+                </div>
+                <div class="navbar navbar-light bg-light justify-content-between">
+                    <div class="col-md-6">     
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm ..." aria-label="Search" id="search">
+
+                    </div>
+                </div>
+            
             <div class="app-content-actions">
                 <div class="app-content-actions-wrapper">
 
@@ -118,7 +128,7 @@
                                 <th scope="col">ACCTION</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="result">
                             @{
                                 foreach (var item in Model)
                                 {
@@ -229,6 +239,16 @@
                 }
             })
         }
+        $(document).ready(function () {
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#result tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+
     </script>
 </body>
 </html>

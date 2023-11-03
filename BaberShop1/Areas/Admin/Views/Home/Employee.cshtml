@@ -5,7 +5,13 @@
     ViewBag.Tittle = "Employee";
     Layout = "";
 }
+<script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous">
 
+   @* ajax*@
+
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,6 +98,12 @@
                     <button type="button" class="btn btn-success"><i class="fas fa-plus mr-2"></i>Thêm nhân viên</button>
                 </a>
             </div>
+            <div class="navbar navbar-light bg-light justify-content-between">
+                <div class="col-md-6">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm ..." aria-label="Search" id="search">
+
+                </div>
+            </div>
             <div class="app-content-actions">
                 <div class="app-content-actions-wrapper">
                 </div>
@@ -118,7 +130,7 @@
                                 <th scope="col">ACCTION</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="result">
 
                             @{
                                 foreach (var item in Model)
@@ -232,6 +244,15 @@
                 }
             })
         }
+        // ajax tìm kiếm
+        $(document).ready(function () {
+            $("#search").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#result tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
     </script>
 </body>
 </html>

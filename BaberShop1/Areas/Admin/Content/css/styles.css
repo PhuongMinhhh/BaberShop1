@@ -636,3 +636,7 @@ body {
 text-decoration: none;
 color: black;
 }
+
+.custom-header {
+    display: flex;
+}
